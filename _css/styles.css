@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+body{
+    background-color: #f9f9f9;
+}
+
+/*Centraliza a Logo*/
+.centered-logo {
+    text-align: center;
+}
+
+
+
+/*Hermits*/
+.HermitGallery {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+    transform: translateZ(0); 
+}
+
+.hermitFace{
+    width: 150px;
+    border-radius: 4%;
+    border: 2.8px solid white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.25s;
+    background-color: white;
+}
+
+.hermitFace:hover{
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+/*Hermit InPage*/
+.hermitSideA img{
+  top: 35%;
+  width: 250px;
+  position: fixed;
+}
+
+.hermitSideB img{
+  top: 35%;
+  right: 2%;
+  width: 250px;
+  position: fixed;
+}
+
+/*Vídeos*/
+.gallery {
+    margin: auto;
+    width: 70%;
+    position: relative;
+    z-index: 2;
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+    transform: translateZ(0);
+  }
+  .gallery figure {
+    flex-basis: 25%;
+    padding: 10px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .gallery figure img {
+    width: 100%;
+    border: 3px solid #404040;
+    border-radius: 3px;
+  }
