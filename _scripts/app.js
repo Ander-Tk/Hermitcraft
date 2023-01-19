@@ -1,0 +1,123 @@
+var app = angular.module('Hermitcraft', []);
+
+app.controller('HermitControll', ['$scope', function ($scope) {
+
+    $scope.HermitSeason = ['Season 6', 'Season 7', 'Season 8', 'Season 9'];
+    $scope.count = $scope.HermitSeason.length - 1;
+    $scope.NewSeason = $scope.HermitSeason[$scope.count];
+    $scope.SeasonPlus = function() {
+        if($scope.count == ($scope.HermitSeason.length - 1)){ $scope.count = 0; $scope.NewSeason = $scope.HermitSeason[$scope.count]}
+        else{$scope.count++; $scope.NewSeason = $scope.HermitSeason[$scope.count]}   
+    }
+    $scope.SeasonMinus = function() {
+        if($scope.count == 0){ $scope.count = ($scope.HermitSeason.length - 1); $scope.NewSeason = $scope.HermitSeason[$scope.count]}
+        else{$scope.count--; $scope.NewSeason = $scope.HermitSeason[$scope.count]}   
+    }
+    
+    $scope.hermits = [
+        //Season 9
+        { name: 'BdoubleO100', head: 'Default', season: 'Season 9' },
+        { name: 'Cubfan135', head: 'Default', season: 'Season 9'},
+        { name: 'Docm77', head: 'Default', season: 'Season 9'},
+        { name: 'EthosLab', head: 'Default', season: 'Season 9'},
+        { name: 'FalseSymmetry', head: 'Default', season: 'Season 9'},
+        { name: 'GoodTimesWithScar', head: 'Default', season: 'Season 9'},
+        { name: 'Grian', head: 'Default', season: 'Season 9'},
+        { name: 'GeminiTay', head: 'Default', season: 'Season 9'},
+        { name: 'Hypnotizd', head: 'Default', season: 'Season 9'},
+        { name: 'iJevin', head: 'Default', season: 'Season 9'},
+        { name: 'ImpulseSV', head: 'Default', season: 'Season 9'},
+        { name: 'Iskall85', head: 'Default', season: 'Season 9'},
+        { name: 'JoeHills', head: 'Default', season: 'Season 9'},
+        { name: 'Keralis', head: 'Default', season: 'Season 9'},
+        { name: 'MumboJumbo', head: 'Default', season: 'Season 9'},
+        { name: 'PearlescentMoon', head: 'Default', season: 'Season 9'},
+        { name: 'Rendog', head: 'Default', season: 'Season 9'},
+        { name: 'StressMonster101', head: 'Default', season: 'Season 9'},
+        { name: 'TangoTek', head: 'Default', season: 'Season 9'},
+        { name: 'TinFoilChef', head: 'Default', season: 'Season 9'},
+        { name: 'VintageBeef', head: 'Default', season: 'Season 9'},
+        { name: 'Welsknight', head: 'Default', season: 'Season 9'},
+        { name: 'xBCrafted', head: 'Default', season: 'Season 9'},
+        { name: 'Xisumavoid', head: 'Default', season: 'Season 9'},
+        { name: 'ZedaphPlays', head: 'Default', season: 'Season 9'},
+        { name: 'ZombieCleo', head: 'Default', season: 'Season 9'},
+        //Season 8
+        { name: 'BdoubleO100', head: 'Default', season: 'Season 8' },
+        { name: 'Cubfan135', head: 'Default', season: 'Season 8'},
+        { name: 'Docm77', head: 'Default', season: 'Season 8'},
+        { name: 'EthosLab', head: 'Default', season: 'Season 8'},
+        { name: 'FalseSymmetry', head: 'Default', season: 'Season 8'},
+        { name: 'GoodTimesWithScar', head: 'Default', season: 'Season 8'},
+        { name: 'Grian', head: 'Default', season: 'Season 8'},
+        { name: 'GeminiTay', head: 'Default', season: 'Season 8'},
+        { name: 'Hypnotizd', head: 'Default', season: 'Season 8'},
+        { name: 'iJevin', head: 'Green iJevin', season: 'Season 8'},
+        { name: 'ImpulseSV', head: 'Default', season: 'Season 8'},
+        { name: 'Iskall85', head: 'Default', season: 'Season 8'},
+        { name: 'JoeHills', head: 'Default', season: 'Season 8'},
+        { name: 'Keralis', head: 'Default', season: 'Season 8'},
+        { name: 'MumboJumbo', head: 'Default', season: 'Season 8'},
+        { name: 'PearlescentMoon', head: 'Default', season: 'Season 8'},
+        { name: 'Rendog', head: 'Default', season: 'Season 8'},
+        { name: 'StressMonster101', head: 'Default', season: 'Season 8'},
+        { name: 'TangoTek', head: 'Default', season: 'Season 8'},
+        { name: 'TinFoilChef', head: 'Default', season: 'Season 8'},
+        { name: 'VintageBeef', head: 'Alien Beef', season: 'Season 8'},
+        { name: 'Welsknight', head: 'Default', season: 'Season 8'},
+        { name: 'xBCrafted', head: 'Default', season: 'Season 8'},
+        { name: 'Xisumavoid', head: 'Xolotl', season: 'Season 8'},
+        { name: 'ZedaphPlays', head: 'Scientist', season: 'Season 8'},
+        { name: 'ZombieCleo', head: 'Hive-Dr8', season: 'Season 8'},
+        //Season 7
+        { name: 'BdoubleO100', head: 'Default', season: 'Season 7' },
+        { name: 'Cubfan135', head: 'Default', season: 'Season 7'},
+        { name: 'Docm77', head: 'Default', season: 'Season 7'},
+        { name: 'EthosLab', head: 'Default', season: 'Season 7'},
+        { name: 'FalseSymmetry', head: 'Default', season: 'Season 7'},
+        { name: 'GoodTimesWithScar', head: 'Default', season: 'Season 7'},
+        { name: 'Grian', head: 'Default', season: 'Season 7'},
+        { name: 'Hypnotizd', head: 'Default', season: 'Season 7'},
+        { name: 'iJevin', head: 'Default', season: 'Season 7'},
+        { name: 'ImpulseSV', head: 'Default', season: 'Season 7'},
+        { name: 'Iskall85', head: 'Default', season: 'Season 7'},
+        { name: 'JoeHills', head: 'Default', season: 'Season 7'},
+        { name: 'Keralis', head: 'Default', season: 'Season 7'},
+        { name: 'MumboJumbo', head: 'Default', season: 'Season 7'},
+        { name: 'Rendog', head: 'Default', season: 'Season 7'},
+        { name: 'StressMonster101', head: 'Default', season: 'Season 7'},
+        { name: 'TangoTek', head: 'Default', season: 'Season 7'},
+        { name: 'TinFoilChef', head: 'Default', season: 'Season 7'},
+        { name: 'VintageBeef', head: 'Default', season: 'Season 7'},
+        { name: 'Welsknight', head: 'Default', season: 'Season 7'},
+        { name: 'xBCrafted', head: 'Default', season: 'Season 7'},
+        { name: 'Xisumavoid', head: 'Default', season: 'Season 7'},
+        { name: 'ZedaphPlays', head: 'Default', season: 'Season 7'},
+        { name: 'ZombieCleo', head: 'Default', season: 'Season 7'},
+        //Season 6
+        { name: 'BdoubleO100', head: 'Default', season: 'Season 6' },
+        { name: 'Biffa2001', head: 'Default', season: 'Season 6'},
+        { name: 'Cubfan135', head: 'Default', season: 'Season 6'},
+        { name: 'Docm77', head: 'Default', season: 'Season 6'},
+        { name: 'FalseSymmetry', head: 'Default', season: 'Season 6'},
+        { name: 'GoodTimesWithScar', head: 'Default', season: 'Season 6'},
+        { name: 'Grian', head: 'Default', season: 'Season 6'},
+        { name: 'iJevin', head: 'Default', season: 'Season 6'},
+        { name: 'ImpulseSV', head: 'Default', season: 'Season 6'},
+        { name: 'Iskall85', head: 'Default', season: 'Season 6'},
+        { name: 'Jessassin', head: 'Default', season: 'Season 6'},
+        { name: 'JoeHills', head: 'Default', season: 'Season 6'},
+        { name: 'Keralis', head: 'Default', season: 'Season 6'},
+        { name: 'MumboJumbo', head: 'Default', season: 'Season 6'},
+        { name: 'PythonGB', head: 'Default', season: 'Season 6'},
+        { name: 'Rendog', head: 'Default', season: 'Season 6'},
+        { name: 'StressMonster101', head: 'Default', season: 'Season 6'},
+        { name: 'TangoTek', head: 'Default', season: 'Season 6'},
+        { name: 'TinFoilChef', head: 'Default', season: 'Season 6'},
+        { name: 'Welsknight', head: 'Default', season: 'Season 6'},
+        { name: 'xBCrafted', head: 'Default', season: 'Season 6'},
+        { name: 'Xisumavoid', head: 'Default', season: 'Season 6'},
+        { name: 'ZedaphPlays', head: 'Default', season: 'Season 6'},
+        { name: 'ZombieCleo', head: 'Default', season: 'Season 6'},
+    ];
+}]);
