@@ -2,7 +2,7 @@ var app = angular.module('Hermitcraft', []);
 
 app.controller('HermitControll', ['$scope', function ($scope) {
 
-    $scope.HermitSeason = ['Season 6', 'Season 7', 'Season 8', 'Season 9'];
+    $scope.HermitSeason = ['Season 7', 'Season 8', 'Season 9'];
     $scope.count = $scope.HermitSeason.length - 1;
     $scope.NewSeason = $scope.HermitSeason[$scope.count];
     $scope.SeasonPlus = function() {
@@ -34,7 +34,7 @@ app.controller('HermitControll', ['$scope', function ($scope) {
         { name: 'PearlescentMoon', head: 'Default', season: 'Season 9'},
         { name: 'Rendog', head: 'Default', season: 'Season 9'},
         { name: 'StressMonster101', head: 'Default', season: 'Season 9'},
-        { name: 'TangoTek', head: 'Default', season: 'Season 9'},
+        { name: 'TangoTek', head: 'DungeonMaster', season: 'Season 9'},
         { name: 'TinFoilChef', head: 'Default', season: 'Season 9'},
         { name: 'VintageBeef', head: 'Default', season: 'Season 9'},
         { name: 'Welsknight', head: 'Default', season: 'Season 9'},
@@ -55,13 +55,13 @@ app.controller('HermitControll', ['$scope', function ($scope) {
         { name: 'iJevin', head: 'Green iJevin', season: 'Season 8'},
         { name: 'ImpulseSV', head: 'Default', season: 'Season 8'},
         { name: 'Iskall85', head: 'Default', season: 'Season 8'},
-        { name: 'JoeHills', head: 'Default', season: 'Season 8'},
+        { name: 'JoeHills', head: 'Snips Hills', season: 'Season 8'},
         { name: 'Keralis', head: 'Default', season: 'Season 8'},
-        { name: 'MumboJumbo', head: 'Default', season: 'Season 8'},
+        { name: 'MumboJumbo', head: 'PotatoBoy', season: 'Season 8'},
         { name: 'PearlescentMoon', head: 'Default', season: 'Season 8'},
-        { name: 'Rendog', head: 'Default', season: 'Season 8'},
+        { name: 'Rendog', head: 'PaleDog', season: 'Season 8'},
         { name: 'StressMonster101', head: 'Default', season: 'Season 8'},
-        { name: 'TangoTek', head: 'Default', season: 'Season 8'},
+        { name: 'TangoTek', head: 'RED', season: 'Season 8'},
         { name: 'TinFoilChef', head: 'Default', season: 'Season 8'},
         { name: 'VintageBeef', head: 'Alien Beef', season: 'Season 8'},
         { name: 'Welsknight', head: 'Default', season: 'Season 8'},
@@ -76,7 +76,7 @@ app.controller('HermitControll', ['$scope', function ($scope) {
         { name: 'EthosLab', head: 'Default', season: 'Season 7'},
         { name: 'FalseSymmetry', head: 'Default', season: 'Season 7'},
         { name: 'GoodTimesWithScar', head: 'Default', season: 'Season 7'},
-        { name: 'Grian', head: 'Default', season: 'Season 7'},
+        { name: 'Grian', head: 'VoteMumbo', season: 'Season 7'},
         { name: 'Hypnotizd', head: 'Default', season: 'Season 7'},
         { name: 'iJevin', head: 'Default', season: 'Season 7'},
         { name: 'ImpulseSV', head: 'Default', season: 'Season 7'},
