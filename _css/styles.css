@@ -76,3 +76,5 @@ nav {
   border: 2px solid #404040;
   border-radius: 3px;
 }
+
+.gallery img:hover {  border: 2px solid #c5c1c1; }
