@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-br" ng-app="Hermitcraft">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--Meta description-->
+    <meta name="description" content="Hermitcraft tribute page">
+    <meta name="keywords" content="Minecraft, Hermitcraft">
     <script src="_scripts/angular.min.js"></script> <!--Angular-->
     <script src="_scripts/app.js"></script> <!--Módulo App-->
     <link rel="shortcut icon" href="_src/Mine.ico">
@@ -11,16 +14,16 @@
     <link rel="stylesheet" href="_css/styles.css">
     <title>Hermitcraft</title>
 </head>
-<body ng-controller="HermitControll">
+<body ng-app="Hermitcraft" ng-controller="HermitControll">
     <nav>
         <input type="button" class="ArrowButton" value="⋘" ng-click="SeasonMinus()">
-        <img src="_src/HermitLogo/{{NewSeason}}.png">
+        <img src="./_src/HermitLogo/{{NewSeason}}.png">
         <input type="button" class="ArrowButton" value="⋙" ng-click="SeasonPlus()">
     </nav>
     <div class="HermitGallery">
 
         <a ng-repeat="h in hermits" ng-show="h.season === NewSeason" href="pages/{{NewSeason}}/{{h.name}}.html">
-            <img src="_src/Hermits/{{h.name}}/Heads/{{h.head}}.png" class='hermitFace' /></a>
+            <img src="./_src/Hermits/{{h.name}}/Heads/{{h.head}}.png" class='hermitFace' /></a>
 
     </div>
 </body>
